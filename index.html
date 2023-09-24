@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zxc</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" defer></script>
+    <script src="libs/rain.js" defer></script>
+</head>
+<body>
+    
+    <div class="logo" style="background-image: url(img/logo.png);"></div>
+
+    <section class="layers">
+        <div class="layers__container">
+            <div class="layers__item layer-1" style="background-image: url(img/back.png);"></div>
+            <div class="layers__item layer-2" style="background-image: url(img/zxc.png);"></div>
+            <div class="layers__item layer-3">
+                <div class="hero-content">
+                    <h1>dead inside <span>random</span></h1>
+                    <div id="mydiv" class="hero-content__p">create a zxc name</div>
+                    <button class="button-start">random</button>
+                </div>
+            </div>
+            <div class="layers__item layer-4">
+                <canvas class="rain"></canvas>
+            </div>
+            <div class="layers__item layer-5" style="background-image: url(img/бабочки.png);"></div>
+        </div>
+    </section>
+
+    <script>
+        const button = document.querySelector('.button-start')
+
+        const fwords = ['kill ', 'teach ', 'fuck ', 'sick ', 'love ', 'suck ', 'zxc ', 'zxczxc ', '10 y.o ', '14 y.o ', '100 y.o ', 'let me day ']
+        const swords = ['me ', 'your ', 'my ', 'fucking ', 'zxc ', 'pudge ', 'sf ', 'puck ', 'brain ']
+        const twords = ['abuser ', 'sexmashine ', 'cursed ', '2k pts clown ']
+
+
+        function handleClick() {
+            var mydiv = document.getElementById("mydiv")
+            mydiv.textContent = fwords[Math.floor(Math.random() * fwords.length)] + 
+            swords[Math.floor(Math.random() * swords.length)] + 
+            twords[Math.floor(Math.random() * twords.length)]
+        }
+
+        button.addEventListener('click', handleClick)
+        
+
+    </script>
+
+</body>
+</html>
